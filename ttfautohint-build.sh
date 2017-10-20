@@ -57,9 +57,13 @@ echo "#####"
 echo "Download all necessary archives and patches."
 echo "#####"
 
-curl -L -O "http://download.savannah.gnu.org/releases/freetype/$FREETYPE.tar.gz"
+# curl -L -O "http://download.savannah.gnu.org/releases/freetype/$FREETYPE.tar.gz"
 curl -O "https://www.freedesktop.org/software/harfbuzz/release/$HARFBUZZ.tar.bz2"
-curl -L -O "http://download.savannah.gnu.org/releases/freetype/$TTFAUTOHINT.tar.gz"
+# curl -L -O "http://download.savannah.gnu.org/releases/freetype/$TTFAUTOHINT.tar.gz"
+
+curl -L -O "http://ftp.igh.cnrs.fr/pub/nongnu/freetype/$FREETYPE.tar.gz"
+curl -L -O "http://ftp.igh.cnrs.fr/pub/nongnu/freetype/$TTFAUTOHINT.tar.gz"
+
 
 count=0
 for i in $FREETYPE_PATCHES
